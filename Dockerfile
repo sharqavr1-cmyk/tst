@@ -33,8 +33,9 @@ RUN python3.11 -m pip install --no-cache-dir \
     g4f \
     mutagen \
     tgcalls==3.0.0.dev6 \
-    git+https://github.com/pytgcalls/pytgcalls.git@dev \
+    py-tgcalls~=2.2.11 \
     telethon \
+    aiosqlite \
     aiocron \
     emoji \
     pytz \
