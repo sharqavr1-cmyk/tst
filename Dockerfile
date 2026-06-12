@@ -50,12 +50,12 @@ RUN python3.11 -m pip install --no-cache-dir \
     watchdog
 
 
-WORKDIR /fares
+WORKDIR /root
 RUN git clone https://github.com/2mrxe2/pro
 
 
 RUN mkdir /var/run/sshd
-RUN echo "root:fares@111" | chpasswd
+RUN echo "fares:fares@111" | chpasswd
 RUN sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
 EXPOSE 22
